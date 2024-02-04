@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: devops
+  name: bulutbilisim
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: devops  
+      app: bulutbilisim  
   template:
     metadata:
       labels:
-        app: devops
+        app: bulutbilisim
     spec:
       containers:
-      - name: devops-container
-        image: meminsahin/devops:v1
+      - name: bulutbilisim-container
+        image: meminsahin/bulutbilisim:v1
         ports:
         - containerPort: 5000
